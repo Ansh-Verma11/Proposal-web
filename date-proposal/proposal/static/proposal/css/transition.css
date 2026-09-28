@@ -1,0 +1,29 @@
+/* =========================
+   PAGE TRANSITION
+========================= */
+
+.page-transition {
+    position: fixed;
+    inset: 0;
+    background: #f8eee8;
+    z-index: 9999;
+    pointer-events: none;
+
+    opacity: 0;
+
+    transition: opacity 0.6s ease;
+}
+
+
+/* Fade INTO the page */
+
+.page-transition.fade-in {
+    opacity: 1;
+}
+
+
+/* Fade OUT of the page */
+
+.page-transition.fade-out {
+    opacity: 1;
+}

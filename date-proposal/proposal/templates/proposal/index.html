@@ -1,0 +1,49 @@
+ {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'proposal/css/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'proposal/css/transition.css' %}">
+</head>
+<body>
+     <div class="page-transition"></div>
+    <main class="proposal_screen">
+        <div class="proposal_content"> 
+            <div class="envelope">
+                <img src="{% static 'proposal/images/envelope.png' %}" alt="">
+            </div>
+            <p class="intro-text">
+    I have a little question<br>
+    for you...
+</p>
+<div class="heart-divider" id="message">
+    ♡ ───────── ♡
+</div>
+<h1 class="question">
+  <span>Will you go on a</span>
+    <span>date with me?</span>
+</h1>
+
+<div class="buttons">
+     <button id="yesBtn" onclick="goToDatePage()">Yes ❤️</button>
+    <button id="noBtn">No 🥺</button>
+</div>
+        </div>
+    </main>
+    <script>
+    function goToDatePage() {
+        window.location.href = "{% url 'date_page' %}";
+    }
+</script>
+<script src="{% static 'proposal/js/script.js' %}"></script>
+<script src="{% static 'proposal/js/page-transition.js' %}"></script>
+</body>
+</html>

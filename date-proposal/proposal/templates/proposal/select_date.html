@@ -1,0 +1,103 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'proposal/css/select_date.css' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Patrick+Hand&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'proposal/css/transition.css' %}">
+
+    <title>Select Date</title>
+</head>
+
+<body>
+    <div class="page-transition"></div>
+    {% csrf_token %}
+<main class="proposal_screen">
+    <div class="proposal_content">
+
+        <h1 class="date-title">Pick our day ♡</h1>
+
+        <p class="date-subtitle">
+            When should we go?
+        </p>
+
+        <!-- CALENDAR -->
+        <div class="calendar-card">
+
+            <div class="calendar-header">
+                <button class="month-arrow" id="previousMonth">‹</button>
+
+                <h2 id="monthYear">September 2026</h2>
+
+                <button class="month-arrow" id="nextMonth">›</button>
+            </div>
+
+            <div class="calendar-weekdays">
+                <span>S</span>
+                <span>M</span>
+                <span>T</span>
+                <span>W</span>
+                <span>T</span>
+                <span>F</span>
+                <span>S</span>
+            </div>
+
+            <div class="calendar-days" id="calendarDays">
+                <!-- JavaScript will create the days here -->
+            </div>
+
+        </div>
+
+
+        <!-- TIME -->
+        <h2 class="time-title">
+            Choose a time
+        </h2>
+
+
+        <!-- EVENING OPTION -->
+        <button class="evening-option" id="eveningOption">
+
+            <span class="evening-icon">🌅</span>
+
+            <span class="evening-text">
+                <strong>Evening</strong>
+                <small>5:00 PM – 8:00 PM</small>
+            </span>
+
+        </button>
+
+
+        <!-- SPECIFIC TIMES -->
+        <div class="time-options">
+
+            <button class="time-option">3:00 PM</button>
+            <button class="time-option">4:00 PM</button>
+            <button class="time-option">5:00 PM</button>
+            <button class="time-option">6:00 PM</button>
+            <button class="time-option">7:00 PM</button>
+            <button class="time-option">8:00 PM</button>
+
+        </div>
+
+
+        <!-- CONTINUE -->
+        <button class="continue-btn" id="continueBtn" disabled>
+            Continue →
+        </button>
+
+    </div>
+</main>
+
+<script src="{% static 'proposal/js/select_date.js' %}"></script>
+<script src="{% static 'proposal/js/page-transition.js' %}"></script>
+
+</body>
+</html>

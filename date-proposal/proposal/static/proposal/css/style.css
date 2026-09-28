@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+
+    background-image: url("../images/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+        animation: pageFadeIn 0.7s ease forwards;
+}
+
+@keyframes pageFadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+.proposal_screen {
+    width: 100%;
+    padding: 10px 15px;
+    justify-content: center;
+}
+
+.proposal_content {
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.envelope {
+    width: 280px;
+    margin: 0 auto;
+}
+
+.envelope img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.intro-text {
+    font-family: "Dancing Script", cursive;
+    font-size: 40px;
+    line-height: 1.4;
+    font-weight: 600;
+    color: #4A2630;
+    text-shadow: 0 2px 8px rgba(255, 240, 225, 0.8);
+}
+
+.heart-divider {
+    margin: 15px 0;
+    font-size: 40px;
+    color: #c94f68;
+      display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Dancing Script", cursive;
+}
+
+.question {
+    font-family: "DynaPuff", cursive;
+    font-size: 48px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #4A2630;
+    text-shadow: 0 2px 8px rgba(255, 240, 225, 0.8);
+}
+
+.question span:first-child {
+    transform: rotate(-2deg);
+}
+
+.question span:last-child {
+    transform: rotate(2deg);
+}
+
+.buttons {
+    margin-top: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+
+    padding-bottom: 25px;
+}
+
+.buttons button {
+    width: 180px;
+    padding: 12px 20px;
+
+    border: none;
+    border-radius: 30px;
+
+    font-family: "DynaPuff", cursive;
+    font-size: 20px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 12px rgba(74, 38, 48, 0.25),
+        inset 0 2px 3px rgba(255, 255, 255, 0.45);
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#yesBtn {
+    background: linear-gradient(
+        180deg,
+        #e87591 0%,
+        #d94f70 100%
+    );
+    color: white;
+}
+
+#noBtn {
+    background: linear-gradient(
+        180deg,
+        #f4c3cf 0%,
+        #e8a8b6 100%
+    );
+    color: #4A2630;
+}
+
+.buttons button:hover {
+    transform: scale(1.04);
+
+    box-shadow:
+        0 7px 16px rgba(74, 38, 48, 0.3),
+        inset 0 2px 4px rgba(255, 255, 255, 0.55);
+}
+
+.buttons button:active {
+    transform: scale(0.94);
+
+    box-shadow:
+        0 3px 8px rgba(74, 38, 48, 0.25),
+        inset 0 2px 4px rgba(255, 255, 255, 0.55);
+}
+
+
+/* ---------- TABLET ---------- */
+
+@media (min-width: 601px) and (max-width: 1000px) {
+
+    .proposal_screen {
+        padding: 20px 15px;
+    }
+
+    .envelope {
+        width: 45vw;
+        max-width: 320px;
+    }
+
+    .intro-text {
+        font-size: 40px;
+    }
+
+    .heart-divider {
+        margin: 12px 0;
+        font-size: 38px;
+    }
+
+    .question {
+        font-size: 46px;
+    }
+
+    .buttons {
+        margin-top: 28px;
+        gap: 14px;
+    }
+
+    .buttons button {
+        width: 180px;
+        padding: 12px 20px;
+        font-size: 20px;
+    }
+}
+
+
+/* ---------- PHONE ---------- */
+
+@media (max-width: 600px) {
+
+    body {
+        background-image: url("../images/background_mobile.png");
+    }
+
+    .proposal_screen {
+        padding: 10px 15px;
+    }
+
+    .envelope {
+        width: 45vw;
+        max-width: 300px;
+    }
+
+    .intro-text {
+        font-size: 34px;
+    }
+
+    .heart-divider {
+        margin: 10px 0;
+        font-size: 32px;
+    }
+
+    .question {
+        font-size: 40px;
+    }
+
+    .buttons {
+        margin-top: 20px;
+        gap: 10px;
+    }
+
+    .buttons button {
+        width: 160px;
+        padding: 11px 18px;
+        font-size: 18px;
+    }
+}
+
+/* ---------- JS classes/id ---------- */
+
+#message.no-message {
+    background: rgba(255, 240, 225, 0.65);
+    padding: 4px 14px;
+    border-radius: 15px;
+    text-shadow: 0 1px 2px white;
+}
+
+@keyframes disappear {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    60% {
+        opacity: 0.5;
+        transform: scale(0.8) rotate(-8deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0) rotate(15deg);
+    }
+}
+
+#noBtn.disappear {
+    animation: disappear 0.5s ease forwards;
+}

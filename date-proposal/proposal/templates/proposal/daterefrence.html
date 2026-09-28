@@ -1,0 +1,114 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Choose Your Date</title>
+
+<link
+    rel="stylesheet"
+    href="{% static 'proposal/css/style.css' %}"
+>
+
+</head>
+
+<body>
+
+<main class="selection-page">
+
+    <div class="selection-card">
+
+        <h1 class="page-title">
+            Choose your plan
+        </h1>
+
+        <p class="page-subtitle">
+            What would you like to do?
+        </p>
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+            <div class="date-options">
+
+                <button
+                    type="submit"
+                    name="date_type"
+                    value="movie"
+                    class="date-option"
+                >
+                    <span class="option-icon">🎬</span>
+                    <span class="option-title">
+                        Movie
+                    </span>
+                    <span class="option-description">
+                        Watch a movie together
+                    </span>
+                </button>
+
+                <button
+                    type="submit"
+                    name="date_type"
+                    value="food"
+                    class="date-option"
+                >
+                    <span class="option-icon">🍕</span>
+                    <span class="option-title">
+                        Food
+                    </span>
+                    <span class="option-description">
+                        Go somewhere for food
+                    </span>
+                </button>
+
+                <button
+                    type="submit"
+                    name="date_type"
+                    value="walk"
+                    class="date-option"
+                >
+                    <span class="option-icon">🌆</span>
+                    <span class="option-title">
+                        Walk
+                    </span>
+                    <span class="option-description">
+                        Spend some time outside
+                    </span>
+                </button>
+
+                <button
+                    type="submit"
+                    name="date_type"
+                    value="surprise"
+                    class="date-option"
+                >
+                    <span class="option-icon">🎁</span>
+                    <span class="option-title">
+                        Surprise
+                    </span>
+                    <span class="option-description">
+                        Something unexpected
+                    </span>
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</main>
+
+</body>
+</html>

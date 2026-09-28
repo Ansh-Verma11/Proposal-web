@@ -1,0 +1,115 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Thank You ♡</title>
+
+    <link rel="stylesheet"
+          href="{% static 'proposal/css/thank_you.css' %}">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Patrick+Hand&display=swap"
+          rel="stylesheet">
+
+          <link rel="stylesheet" href="{% static 'proposal/css/transition.css' %}">
+
+</head>
+
+
+<body>
+    <div class="page-transition"></div>
+
+    <main class="thankyou-screen">
+
+        <div class="thankyou-content">
+
+            <div class="small-heart">
+                ♡
+            </div>
+
+
+            <h1 class="thankyou-title">
+                Thank You!
+            </h1>
+
+
+            <p class="thankyou-subtitle">
+                for saying yes ♡
+            </p>
+
+
+            <div class="note-card">
+
+                <p class="note-text">
+                    I'm really happy that you said yes.
+                    Now we have a little plan to look
+                    forward to...
+                </p>
+
+
+                <div class="plan-divider">
+                    ♡
+                </div>
+
+
+                <h2 class="plan-title">
+                    Our little plan
+                </h2>
+
+
+                <div class="plan-details">
+
+                    <p>
+                        <span>♡</span>
+                        <span id="selectedDateType">
+    {{ response.date_type }}
+</span>
+
+                    <p>
+                        <span>📅</span>
+                       <span id="selectedDate">
+    {{ response.selected_date|date:"l, F j, Y" }}
+</span>
+
+
+                    <p>
+                        <span id="selectedTime">
+    {{ response.selected_time }}
+</span>
+                    </p>
+
+                </div>
+
+
+                <p class="note-ending">
+                    Until then... take care ♡
+                </p>
+
+            </div>
+
+
+            <div class="bottom-heart">
+                ✦ ♡ ✦
+            </div>
+
+        </div>
+
+    </main>
+
+
+</body>
+<script src="{% static 'proposal/js/page-transition.js' %}"></script>
+</html>

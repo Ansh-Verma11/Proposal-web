@@ -1,0 +1,79 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Date</title>
+
+    <link rel="stylesheet" href="{% static 'proposal/css/selectiondate.css' %}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Patrick+Hand&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'proposal/css/transition.css' %}">
+</head>
+
+<body>
+    <div id="pageTransition"></div>
+    {% csrf_token %}
+    <main class="proposal-screen">
+
+        <div class="proposal-content">
+
+            <h1 class="yay-title">
+    Yay!
+    <span class="yay-hearts">💕</span>
+</h1>
+            <h class="date-question">So... what kind of date should we go on?</h>
+             <p class="date-subtitle">
+            Choose your favorite (or let's decide together!)
+        </p>
+
+<div class="date-options">
+
+    <button class="date-option" data-date="Movie Date">
+        <span class="date-icon">🍿</span>
+        <span class="date-name">Movie Date</span>
+    </button>
+
+    <button class="date-option" data-date="Food Date">
+        <span class="date-icon">🍕</span>
+        <span class="date-name">Food Date</span>
+    </button>
+
+    <button class="date-option" data-date="Coffee Date">
+        <span class="date-icon">☕</span>
+        <span class="date-name">Coffee Date</span>
+    </button>
+
+    <button class="date-option" data-date="Sunset Date">
+        <span class="date-icon">🌅</span>
+        <span class="date-name">Sunset Date</span>
+    </button>
+
+    <button class="date-option" data-date="Walk / Park Date">
+        <span class="date-icon">🌳</span>
+        <span class="date-name">Walk</span>
+    </button>
+
+    <button class="date-option" data-date="Surprise Me">
+        <span class="date-icon">✨</span>
+        <span class="date-name">Surprise Me</span>
+    </button>
+
+</div>
+
+<button class="continue-date-btn" id="continueDateBtn" disabled>
+    Continue →
+</button>
+
+        </div>
+
+    </main>
+    <script src="{% static 'proposal/js/selectiondate.js' %}"></script>
+<script src="{% static 'proposal/js/page-transition.js' %}"></script>
+</body>
+</html>
